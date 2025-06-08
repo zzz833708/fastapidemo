@@ -117,5 +117,5 @@ class CommonQueryParams:
 
 @app.get("/items")
 async def read_items(commons=Depends(CommonQueryParams)):
-    response = {"q": commons.q, "skip": commons.skip, "limit": commons.limit}
+    response = {"q": commons.q, "skip": commons.skip, "limit": commons.limit, "number": 100}
     return response
